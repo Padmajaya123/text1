@@ -60,8 +60,8 @@ desired_callbacks=[checkpoint]
 
 model.fit(X,y,epochs=4,batch_size=256,callbacks=desired_callbacks)
 
-filepath='model_weights_saved.hdf5'
-model.load.weights(filename)
+filename='model_weights_saved.hdf5'
+model.load_weights(filename)
 model.compile(loss='categorical_crossentropy',optimizer='adam')
 
 num_to_char=dict((i,c) for i,c in enumerate(chars))
